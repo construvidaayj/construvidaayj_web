@@ -41,10 +41,10 @@ const HomePage = () => {
     <div className="animate-fade-in">
       <section className="relative py-20 md:py-32 bg-gradient-to-br from-emerald-600 to-green-800 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="heroPattern" patternUnits="userSpaceOnUse" width="50" height="50" patternTransform="rotate(30)"><path d="M0 50L50 0ZM25 25L0 0L50 50" stroke="currentColor" strokeWidth="1"/></pattern></defs><rect width="100%" height="100%" fill="url(#heroPattern)"/></svg>
+          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="heroPattern" patternUnits="userSpaceOnUse" width="50" height="50" patternTransform="rotate(30)"><path d="M0 50L50 0ZM25 25L0 0L50 50" stroke="currentColor" strokeWidth="1" /></pattern></defs><rect width="100%" height="100%" fill="url(#heroPattern)" /></svg>
         </div>
         <div className="container mx-auto px-4 text-center relative z-10">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -53,7 +53,7 @@ const HomePage = () => {
             <p className="mb-4">Construvida AYJ</p>
             <span className="block md:inline">Tu Aliado en Seguridad Social.</span>
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -67,12 +67,14 @@ const HomePage = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="space-x-4"
           >
-            <Button size="lg" className="bg-white text-emerald-700 hover:bg-gray-100 shadow-lg transform hover:scale-105 transition-transform duration-300" asChild>
-              <Link to="/servicios">Nuestros Servicios</Link>
-            </Button>
-            <Button size="lg" variant="outline" className="border-white bg-white/10 shadow-lg transform hover:scale-105 transition-transform duration-300" asChild>
-              <Link to="/contacto">Contáctanos Hoy</Link>
-            </Button>
+            <div className="flex gap-4 justify-center">
+              <Button size="lg" className="bg-white text-emerald-700 hover:bg-gray-100 shadow-lg transform hover:scale-105 transition-transform duration-300" asChild>
+                <Link to="/servicios">Nuestros Servicios</Link>
+              </Button>
+              <Button size="lg" variant="outline" className="border-white bg-white/10 shadow-lg transform hover:scale-105 transition-transform duration-300" asChild>
+                <Link to="/contacto">Contáctanos Hoy</Link>
+              </Button>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -90,7 +92,7 @@ const HomePage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-               <Card className="h-full flex flex-col bg-white hover:bg-gray-50 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 border-t-4 border-emerald-600 hover:border-emerald-800">
+                <Card className="h-full flex flex-col bg-white hover:bg-gray-50 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 border-t-4 border-emerald-600 hover:border-emerald-800">
                   <CardHeader className="items-center text-center pt-8">
                     <div className="p-3 bg-emerald-600/10 rounded-full mb-4">
                       {card.icon}
@@ -118,15 +120,15 @@ const HomePage = () => {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center gap-12">
-            <motion.div 
+            <motion.div
               className="lg:w-1/2"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
             >
-              <img  alt="Equipo de Construvidad AYJ en una reunión" className="rounded-lg shadow-xl w-full h-auto object-cover aspect-video" src="https://images.unsplash.com/photo-1551190930-4abddd2bd012" />
+              <img alt="Equipo de Construvidad AYJ en una reunión" className="rounded-lg shadow-xl w-full h-auto object-cover aspect-video" src="https://images.unsplash.com/photo-1551190930-4abddd2bd012" />
             </motion.div>
-            <motion.div 
+            <motion.div
               className="lg:w-1/2"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -149,7 +151,7 @@ const HomePage = () => {
 
       <section className="py-16 md:py-24 bg-gradient-to-r from-green-700 to-emerald-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -157,7 +159,7 @@ const HomePage = () => {
           >
             ¿Listo para optimizar tu Seguridad Social?
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -176,7 +178,7 @@ const HomePage = () => {
                 <Phone className="h-5 w-5" /> Solicitar Asesoría
               </Link>
             </Button>
-            
+
           </motion.div>
         </div>
       </section>

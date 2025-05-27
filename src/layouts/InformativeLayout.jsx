@@ -27,9 +27,9 @@ const InformativeLayout = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="bg-gradient-to-r from-emerald-600 to-green-800 text-white shadow-lg sticky top-0 z-50">
-        <div className="container mx-auto px-8 flex items-center justify-between">
+        <div className="container mx-auto px-1 md:px-8 py-1 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
-            <img  alt="Construvidad AYJ Logo" className="h-24 w-auto" src="/LogoFinal.png" />
+            <img  alt="Construvidad AYJ Logo" className="h-16 w-auto" src="/LogoFinal.png" />
           </Link>
           <nav className="hidden md:flex items-center space-x-1 lg:space-x-2">
             {navLinks.map((link) => (
@@ -166,7 +166,7 @@ const InformativeLayout = () => {
       */
       // --------------------------------------------------
     >
-      <img src="/whatsapp.png" className="h-20" alt="logo Whatsapp" title="Whatsapp Construvida AYJ" />
+      <img src="/whatsapp.png" className="h-16 md:h-20 w-auto " alt="logo Whatsapp" title="Whatsapp Construvida AYJ" />
     </motion.a>
     </div>
   );
